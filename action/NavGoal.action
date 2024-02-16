@@ -1,0 +1,14 @@
+# The desired pose
+float32 x
+float32 y
+float32 theta
+---
+# The final pose
+float32 x_final
+float32 y_final
+float32 theta_final
+---
+# The difference between goal and current pose
+float32 x_delta
+float32 y_delta
+float32 theta_delta

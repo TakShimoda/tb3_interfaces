@@ -33,6 +33,7 @@ endif()
 rosidl_generate_interfaces(${PROJECT_NAME} 
   "srv/TB.srv"
   "action/ContactComputer.action"
+  "action/NavGoal.action"
   "msg/RobotStatus.msg"
   )
 ament_export_dependencies(rosidl_default_runtime)
