@@ -35,6 +35,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "action/ContactComputer.action"
   "action/NavGoal.action"
   "msg/RobotStatus.msg"
+  "srv/ReturnPose.srv"
   )
 ament_export_dependencies(rosidl_default_runtime)
 

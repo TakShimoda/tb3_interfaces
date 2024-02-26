@@ -1,14 +1,29 @@
 # The desired pose
+# These simple values represent the goal in the local robot frame
+# TODO: We don't actually need y; only x and theta are needed for controls
 float32 x
 float32 y
 float32 theta
+# This represents a 3x3 SE(2) matrix unraveled, which is the global goal that the action server has to 
+# check its current pose against
+# Format: [cos, -sin, x, sin, cos, y, 0, 0, 1]
+float32[9] se2
+# Global theta: for checking global theta as it's hard to convert from SE(2) to theta
+float32 theta_global
+# ID's. The id's to identify the larger goals, and the waypoints which are the subgoals
+int16 goal_id
+int16 wp_id
 ---
 # The final pose
 float32 x_final
 float32 y_final
 float32 theta_final
+int16 goal_id
+int16 wp_id
 ---
 # The difference between goal and current pose
 float32 x_delta
 float32 y_delta
 float32 theta_delta
+int16 goal_id
+int16 wp_id
